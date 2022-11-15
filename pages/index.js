@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>codecloth.com - Wear the cod</title>
+        <title>CODESWAGS.COM - Wear the code</title>
         <meta name="description" content="CodeClothes.com - Wear the code" />
         <Link rel="shortcut icon" href="./public/favicon.ico" />
       </Head>
