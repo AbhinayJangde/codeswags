@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { AiOutlineShoppingCart, AiOutlineSearch, AiOutlineCloseCircle, AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
 import { BsFillBagCheckFill } from 'react-icons/bs';
+import { FaUserCircle } from 'react-icons/fa';
 const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
   console.log(cart, addToCart, removeFromCart, clearCart, subTotal)
   const toggleCart = () => {
@@ -36,6 +37,9 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         </div>
         <div className="cart flex space-x-5 items-center absolute top-4 right-4 md:top-2 md:right-5">
           {/* <AiOutlineSearch className='text-xl md:text-3xl cursor-pointer text-blue-900' /> */}
+          <Link href={'/login'}>
+          <FaUserCircle className='opencart text-xl md:text-3xl cursor-pointer text-blue-900' />
+          </Link>
           <AiOutlineShoppingCart onClick={toggleCart} className='opencart text-xl md:text-3xl cursor-pointer text-blue-900' />
         </div>
         <div ref={ref} className={`w-96 h-[100vh] sideCart absolute z-10 top-0 right-0 ${Object.keys(cart).length !== 0 ? `translate-x-0`: `translate-x-full`}  transform transition-transform  bg-blue-100 px-5 py-4`}>
