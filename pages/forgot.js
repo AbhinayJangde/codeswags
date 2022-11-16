@@ -1,12 +1,12 @@
 import React from 'react'
-
+import Image from 'next/image'
 const forgot = () => {
   return (
     <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
     <div class="w-full max-w-md space-y-8">
       <div>
-        <img class="mx-auto h-12 w-auto" src="logo.png" alt="Your Company" />
-        <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Log in</h2>
+        <Image class="mx-auto h-12 w-auto" src="/logo.png" width={220} height={40} alt="Your Company" />
+        <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Forgot password</h2>
 
       </div>
       <form class="mt-8 space-y-6" action="#" method="POST">

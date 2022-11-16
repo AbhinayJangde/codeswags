@@ -1,11 +1,11 @@
 import React from 'react'
-
+import Image from 'next/image'
 const order = () => {
   return (
     <section className="text-gray-600 body-font overflow-hidden">
   <div className="container px-5 py-10 mx-auto">
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
-    <img
+    <Image
         alt="ecommerce"
         className="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-top rounded"
         src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg"

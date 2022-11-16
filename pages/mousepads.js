@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 const mousepads = () => {
   return (
     <section className="text-gray-600 body-font">
@@ -7,7 +8,7 @@ const mousepads = () => {
         <div className="flex flex-wrap items-center justify-center -m-4">
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
+              <Image alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS
@@ -22,7 +23,7 @@ const mousepads = () => {
           </div>
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
+              <Image alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS
@@ -37,7 +38,7 @@ const mousepads = () => {
           </div>
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
+              <Image alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS
@@ -52,7 +53,7 @@ const mousepads = () => {
           </div>
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
+              <Image alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS
@@ -67,7 +68,7 @@ const mousepads = () => {
           </div>
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
+              <Image alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS
@@ -82,7 +83,7 @@ const mousepads = () => {
           </div>
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
+              <Image alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS
@@ -97,7 +98,7 @@ const mousepads = () => {
           </div>
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
+              <Image alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS
@@ -112,7 +113,7 @@ const mousepads = () => {
           </div>
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
+              <Image alt="ecommerce" className=" block " src="https://m.media-amazon.com/images/I/716P3SrdlIL._SX522_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS

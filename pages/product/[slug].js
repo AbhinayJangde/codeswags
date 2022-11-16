@@ -1,25 +1,25 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
-const Slug = ({addToCart}) => {
+import Image from 'next/image'
+const Slug = ({ addToCart }) => {
   const router = useRouter()
   const { slug } = router.query
   const [pin, setPin] = useState()
   const [service, setService] = useState()
-  const checkServiceability = async ()=>{
+  const checkServiceability = async () => {
     let pins = await fetch(`http://localhost:3000/api/pincode`)
     let pinJson = await pins.json()
     // console.log(pinJson, pin)
-    if(pinJson.includes(parseInt(pin)))
-    { 
+    if (pinJson.includes(parseInt(pin))) {
       setService(true)
     }
-    else{
+    else {
       setService(false)
     }
     // console.log(service)
   }
 
-  const onChangePin = (e)=>{
+  const onChangePin = (e) => {
     setPin(e.target.value)
   }
   return (
@@ -27,7 +27,7 @@ const Slug = ({addToCart}) => {
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-10 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
-            <img
+            <Image
               alt="ecommerce"
               className="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-top rounded"
               src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg"
@@ -178,12 +178,12 @@ const Slug = ({addToCart}) => {
               </div>
               <div className="flex justify-start space-x-4">
                 <span className="title-font font-medium text-2xl text-gray-900">
-                ₹499.00
+                  ₹499.00
                 </span>
                 <button className="flex  text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                   Buy Now
                 </button>
-                <button onClick={()=>{addToCart(slug, 1 , 499,'Wear the code(XL/Red)', 'XL', 'Red')}} className="flex  text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                <button onClick={() => { addToCart(slug, 1, 499, 'Wear the code(XL/Red)', 'XL', 'Red') }} className="flex  text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                   Add to Cart
                 </button>
                 <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500">
@@ -205,13 +205,13 @@ const Slug = ({addToCart}) => {
                   Check
                 </button>
               </div>
-              { !service && service != null && <div className=" text-red-600 mt-2">
+              {!service && service != null && <div className=" text-red-600 mt-2">
                 Sorry, We do not deliver to this pincode yet.
               </div>}
-              
-              {service &&  service != null && <div className=" text-green-600 mt-2">
-              Yay! This pincode is serviceable.
-            </div>}
+
+              {service && service != null && <div className=" text-green-600 mt-2">
+                Yay! This pincode is serviceable.
+              </div>}
             </div>
           </div>
         </div>

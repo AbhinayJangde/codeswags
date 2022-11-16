@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import React from 'react'
-
+import Image from 'next/image'
 const Login = () => {
   return (
     <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div class="w-full max-w-md space-y-8">
         <div>
-          <img class="mx-auto h-12 w-auto" src="logo.png" alt="Your Company" />
+          <Image class="mx-auto h-12 w-auto" src="/logo.png" width={220} height={40} alt="Your Company" />
           <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Log in</h2>
 
         </div>
@@ -44,8 +44,8 @@ const Login = () => {
               </span>
               Log in
             </button>
-          <div className="text-grey-dark mt-6 text-center">
-            I don't have an account?
+          <div className=" mt-6 text-center">
+            {`I don't have an account?`}
             <Link href='/signup' className="no-underline border-b border-blue mx-1 text-indigo-500">
               Sign up
             </Link>.

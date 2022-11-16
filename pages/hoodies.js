@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 const hoodies = () => {
   return (
     <section className="text-gray-600 body-font">
@@ -10,7 +11,7 @@ const hoodies = () => {
 
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
+              <Image alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS
@@ -25,7 +26,7 @@ const hoodies = () => {
           </div>
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
+              <Image alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS
@@ -40,7 +41,7 @@ const hoodies = () => {
           </div>
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
+              <Image alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS
@@ -55,7 +56,7 @@ const hoodies = () => {
           </div>
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
+              <Image alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS
@@ -70,7 +71,7 @@ const hoodies = () => {
           </div>
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
+              <Image alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS
@@ -85,7 +86,7 @@ const hoodies = () => {
           </div>
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
+              <Image alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS
@@ -100,7 +101,7 @@ const hoodies = () => {
           </div>
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
+              <Image alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS
@@ -115,7 +116,7 @@ const hoodies = () => {
           </div>
           <div className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
             <Link href={'/product/wear-the-code'} className="block relative  rounded overflow-hidden">
-              <img alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
+              <Image alt="ecommerce" className="h-[36vh] block " src="https://m.media-amazon.com/images/I/71BirWti0xL._UX569_.jpg" />
               <div className="mt-4">
                 <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   T-SHIRTS
