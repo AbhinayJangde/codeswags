@@ -4,8 +4,9 @@ import Link from 'next/link'
 import { AiOutlineShoppingCart, AiOutlineSearch, AiOutlineCloseCircle, AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
 import { BsFillBagCheckFill } from 'react-icons/bs';
 import { FaUserCircle } from 'react-icons/fa';
+
 const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
-  console.log(cart, addToCart, removeFromCart, clearCart, subTotal)
+
   const toggleCart = () => {
     if (ref.current.classList.contains('translate-x-full')) {
       ref.current.classList.remove('translate-x-full')
@@ -16,7 +17,6 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
       ref.current.classList.add('translate-x-full')
     }
   }
-
   const ref = useRef()
   return (
     <>
