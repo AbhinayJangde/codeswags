@@ -58,6 +58,7 @@ const Slug = ({ buyNow, addToCart, product, variants }) => {
                   {Object.keys(variants).includes('red') && Object.keys(variants['red']).includes(size) && <button onClick={() => { refreshVariants(size, 'red') }} className={`border-2 ml-1 bg-red-700 rounded-full w-6 h-6 focus:outline-none ${color === 'red' ? 'border-black' : 'border-gray-300'}`} />}
                   {Object.keys(variants).includes('blue') && Object.keys(variants['blue']).includes(size) && <button onClick={() => { refreshVariants(size, 'blue') }} className={`border-2 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none ${color === 'blue' ? 'border-black' : 'border-gray-300'}`} />}
                   {Object.keys(variants).includes('black') && Object.keys(variants['black']).includes(size) && <button onClick={() => { refreshVariants(size, 'black') }} className={`border-2 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none ${color === 'black' ? 'border-black' : 'border-gray-300'}`} />}
+                  {Object.keys(variants).includes('brown') && Object.keys(variants['brown']).includes(size) && <button onClick={() => { refreshVariants(size, 'brown') }} className={`border-2 ml-1 bg-red-900 rounded-full w-6 h-6 focus:outline-none ${color === 'brown' ? 'border-black' : 'border-gray-300'}`} />}
                 </div>
                 <div className="flex ml-6 items-center">
                   <span className="mr-3">Size</span>
@@ -83,12 +84,12 @@ const Slug = ({ buyNow, addToCart, product, variants }) => {
               </div>
               <div className="flex justify-start space-x-4">
                 <span className="title-font font-medium text-2xl text-gray-900">
-                  ₹499.00
+                  ₹{product.price}.00
                 </span>
-                <button onClick={() => { buyNow(slug, 1, 499, product.title, size, color) }} className="flex  text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                <button onClick={() => { buyNow(slug, 1, product.price, product.title, size, color) }} className="flex  text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                   Buy Now
                 </button>
-                <button onClick={() => { addToCart(slug, 1, 499, product.title, size, color) }} className="flex  text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                <button onClick={() => { addToCart(slug, 1, product.price, product.title, size, color) }} className="flex  text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                   Add to Cart
                 </button>
              
@@ -119,7 +120,7 @@ export async function getServerSideProps(context) {
     mongoose.connect(process.env.DB_URI)
   }
   let product = await Product.findOne({ slug: context.query.slug })
-  let variants = await Product.find({ title: product.title })
+  let variants = await Product.find({ title: product.title, category: product.category })
   let colorSizeSlug = {}
   for (let item of variants) { // {red: {xl:{slug: 'wear-the-code--xl'}}}
     if (Object.keys(colorSizeSlug).includes(item.color)) {

@@ -3,12 +3,12 @@ import mongoose from 'mongoose'
 import Link from 'next/link'
 import Image from 'next/image'
 import Product from '../models/Product.js'
-// import tshirt from '../public/tshirt.jpg'
 const tshirts = ({ products }) => {
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap items-center justify-center -m-4">
+        {Object.keys(products).length === 0 && <p className='text-2xl my-36 py-56'>Sorry all the tshirts are corrently out of stock. New stock comming soon. Stay Tuned.</p>}
           {Object.keys(products).map((item) => {
             return <div key={products[item]._id} className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
               <Link passHref={true} href={`/product/${products[item].slug}`} className="block relative  rounded overflow-hidden">
@@ -48,9 +48,9 @@ const tshirts = ({ products }) => {
 
 export async function getServerSideProps(context) {
   if (!mongoose.connections[0].readyState) {
-    await mongoose.connect(process.env.DB_URI)
+    mongoose.connect(process.env.DB_URI)
   }
-  let products = await Product.find({ category: 'T-SHIRTS' })
+  let products = await Product.find({ category: 'tshirts' })
   let tshirts = {}
   for (let item of products) {
     if (item.title in tshirts) {
