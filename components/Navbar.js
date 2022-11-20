@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { AiOutlineShoppingCart, AiOutlineSearch, AiOutlineCloseCircle, AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
+import { AiOutlineShoppingCart, AiOutlineCloseCircle, AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
 import { BsFillBagCheckFill } from 'react-icons/bs';
-import { FaUserCircle } from 'react-icons/fa';
+import { BiUserCircle, BiSearch } from 'react-icons/bi';
 
 const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
 
@@ -36,9 +36,9 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
           </ul>
         </div>
         <div className="cart flex space-x-5 items-center absolute top-4 right-4 md:top-2 md:right-5">
-          {/* <AiOutlineSearch className='text-xl md:text-3xl cursor-pointer text-blue-900' /> */}
+          <BiSearch className='text-xl md:text-3xl cursor-pointer text-blue-900' />
           <Link href={'/login'}>
-          <FaUserCircle className='opencart text-xl md:text-3xl cursor-pointer text-blue-900' />
+          <BiUserCircle className='opencart text-xl md:text-3xl cursor-pointer text-blue-900' />
           </Link>
           <AiOutlineShoppingCart onClick={toggleCart} className='opencart text-xl md:text-3xl cursor-pointer text-blue-900' />
         </div>

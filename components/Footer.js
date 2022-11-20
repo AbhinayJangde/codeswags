@@ -18,16 +18,16 @@ const Footer = () => {
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">SHOP</h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Tshirts</a>
+                <Link href={'/tshirts'} className="text-gray-600 hover:text-gray-800">Tshirts</Link>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Hoodies</a>
+                <Link href={'/hoodies'} className="text-gray-600 hover:text-gray-800">Hoodies</Link>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Stickers</a>
+                <Link href={'stickers'} className="text-gray-600 hover:text-gray-800">Stickers</Link>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Mugs</a>
+                <Link href={'mungs'} className="text-gray-600 hover:text-gray-800">Mugs</Link>
               </li>
             </nav>
           </div>
@@ -35,13 +35,13 @@ const Footer = () => {
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CUSTOMER SERVICE</h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Contact Us</a>
+                <Link href={'/contact'} className="text-gray-600 hover:text-gray-800">Contact Us</Link>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">About Us</a>
+                <Link href={'/about'} className="text-gray-600 hover:text-gray-800">About Us</Link>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Return Policy</a>
+                <Link href={'/returnpolicy'} className="text-gray-600 hover:text-gray-800">Return Policy</Link>
               </li>
 
             </nav>
@@ -50,10 +50,10 @@ const Footer = () => {
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">POLICY</h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Privacy Policy</a>
+                <Link href={'/'} className="text-gray-600 hover:text-gray-800">Privacy Policy</Link>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Terms and Conditions</a>
+                <Link href={'/'} className="text-gray-600 hover:text-gray-800">Terms and Conditions</Link>
               </li>
 
             </nav>
