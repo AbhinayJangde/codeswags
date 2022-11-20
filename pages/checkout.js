@@ -2,7 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import { AiOutlineShoppingCart, AiOutlineSearch, AiOutlineCloseCircle, AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
 import { BsFillBagCheckFill } from 'react-icons/bs';
-const Checkout = ({ cart, subTotal,addToCart,removeFromCart }) => {
+const Checkout = ({ cart, subTotal, addToCart, removeFromCart }) => {
+  
   return (
     <div className='container px-4 sm:m-auto'>
       <h1 className='font-bold text-3xl my-8 text-center '>Checkout</h1>
@@ -64,9 +65,10 @@ const Checkout = ({ cart, subTotal,addToCart,removeFromCart }) => {
             <div className='my-4  text-center'>Your cart is empty.</div>
           }
           {Object.keys(cart).map((k) => {
+            cart[k].variant = cart[k].variant[0].toUpperCase() +cart[k].variant.substring(1)
             return (<li key={k}>
               <div className="item flex my-5">
-                <div className='font-semibold'>{cart[k].name}</div>
+                <div className='font-semibold'>{cart[k].name}({cart[k].size}/{cart[k].variant})</div>
                 <div className='w-1/3 flex items-center justify-center font-semibold text-xl '><AiOutlineMinusCircle onClick={() => removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)} className='cursor-pointer' /> <span className="mx-2">{cart[k].qty}</span>
                   <AiOutlinePlusCircle onClick={() => addToCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)} className='cursor-pointer' /></div>
               </div>
