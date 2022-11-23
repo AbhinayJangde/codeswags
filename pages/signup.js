@@ -33,6 +33,7 @@ const Signup = () => {
     setEmail('')
     setPassword('')
     toast.success('Your account has been created', { position: "top-center", autoClose: 5000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, theme: "light", });
+    router.push('http://localhost:3000/login')
 
   }
   const handleChange = (e) => {
