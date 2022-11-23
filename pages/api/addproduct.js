@@ -2,7 +2,7 @@ import Product from '../../models/Product.js'
 import connectdb from '../../middleware/db.js'
 
 const handler = async (req, res)=>{
-    // console.log(req.body)
+    console.log(req.body)
     if(req.method == 'POST'){
         for(let i=0; i<req.body.length; i++){
             let p = new Product({
