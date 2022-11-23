@@ -8,7 +8,7 @@ const Caps = ({ products }) => {
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap items-center justify-center -m-4">
-          {Object.keys(products).length === 0 && <p className='text-2xl my-36 py-56'>Sorry all the caps are corrently out of stock. New stock comming soon. Stay Tuned.</p>}
+          {Object.keys(products).length === 0 && <p className='md:text-2xl md:my-36 md:py-56  mx-5 text-center my-36 py-28'>Sorry all the caps are corrently out of stock. New stock comming soon. Stay Tuned.</p>}
           {Object.keys(products).map((item) => {
             return <div key={products[item]._id} className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
               <Link passHref={true} href={`/product/${products[item].slug}`} className="block relative  rounded overflow-hidden">

@@ -42,7 +42,7 @@ const Navbar = ({logout, user, cart, addToCart, removeFromCart, clearCart, subTo
           {/* <BiSearch className='text-xl md:text-3xl cursor-pointer text-blue-900' /> */}
           <a onMouseOver={()=>{setDropdown(true)}} onMouseLeave={()=>{setDropdown(false)}}>
 
-          { dropdown && <div onMouseOver={()=>{setDropdown(true)}} onMouseLeave={()=>{setDropdown(false)}} className="absolute right-12  top-7 rounded-md w-40 px-3 py-4 bg-blue-300">
+          { dropdown && <div onMouseOver={()=>{setDropdown(true)}} onMouseLeave={()=>{setDropdown(false)}} className="absolute right-12  top-7 rounded-md w-40 px-3 py-4 border bg-white shadow-lg">
             <ul className=''>
               <Link href={'/myaccount'}><li className=' text-gray-900 text-semibold text-xl '>My Account</li></Link>
               <Link href={'/orders'}><li className=' text-gray-900 text-semibold text-xl '>Orders</li></Link>
