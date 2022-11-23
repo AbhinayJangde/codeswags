@@ -4,9 +4,10 @@ import Link from 'next/link'
 import { AiOutlineShoppingCart, AiOutlineCloseCircle, AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
 import { BsFillBagCheckFill } from 'react-icons/bs';
 import { BiUserCircle, BiSearch } from 'react-icons/bi';
+import { MdLogin} from 'react-icons/md';
 
-const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
-
+const Navbar = ({logout, user, cart, addToCart, removeFromCart, clearCart, subTotal }) => {
+  const [dropdown, setDropdown] = useState(false)
   const toggleCart = () => {
     if (ref.current.classList.contains('translate-x-full')) {
       ref.current.classList.remove('translate-x-full')
@@ -18,11 +19,13 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
     }
   }
   const ref = useRef()
+
+ 
   return (
     <>
 
       <nav className='flex flex-col md:flex-row md:justify-start justify-center items-center py-2 shadow-md sticky top-0 bg-white z-10'>
-        <div className="logo mx-5 cursor-pointer">
+        <div className="logo mr-auto pl-3 md:pl-0 md:mx-5 cursor-pointer">
           <Link href={'/'}><Image src="/logo.png" width={180} height={20} alt="" /></Link>
         </div>
         <div className="nav flex">
@@ -31,16 +34,28 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
             <Link href='/hoodies'><li>Hoodies</li></Link>
             <Link href='/stickers'><li>Stickers</li></Link>
             <Link href='/mugs'><li>Mugs</li></Link>
-            <Link href='/mousepads'><li>Mousepads</li></Link>
-            <Link href='/caps'><li>Caps</li></Link>
+            {/* <Link href='/mousepads'><li>Mousepads</li></Link> */}
+            {/* <Link href='/caps'><li>Caps</li></Link> */}
           </ul>
         </div>
-        <div className="cart flex space-x-5 items-center absolute top-4 right-4 md:top-2 md:right-5">
-          <BiSearch className='text-xl md:text-3xl cursor-pointer text-blue-900' />
-          <Link href={'/login'}>
-          <BiUserCircle className='opencart text-xl md:text-3xl cursor-pointer text-blue-900' />
-          </Link>
-          <AiOutlineShoppingCart onClick={toggleCart} className='opencart text-xl md:text-3xl cursor-pointer text-blue-900' />
+        <div className="cart flex space-x-2 items-center absolute top-3 right-3 md:top-2 md:right-5">
+          {/* <BiSearch className='text-xl md:text-3xl cursor-pointer text-blue-900' /> */}
+          <a onMouseOver={()=>{setDropdown(true)}} onMouseLeave={()=>{setDropdown(false)}}>
+
+          { dropdown && <div onMouseOver={()=>{setDropdown(true)}} onMouseLeave={()=>{setDropdown(false)}} className="absolute right-12  top-7 rounded-md w-40 px-3 py-4 bg-blue-300">
+            <ul className=''>
+              <Link href={'/myaccount'}><li className=' text-gray-900 text-semibold text-xl '>My Account</li></Link>
+              <Link href={'/orders'}><li className=' text-gray-900 text-semibold text-xl '>Orders</li></Link>
+              <a onClick={logout}><li className=' cursor-pointer text-gray-900 text-semibold text-xl '>Logout</li></a>
+            </ul>
+          </div>}
+          {user.value && <BiUserCircle  className=' text-2xl md:text-3xl cursor-pointer text-blue-900' />}
+
+          </a>
+          {!user.value && <Link href={'/login'}>
+            <MdLogin className=' text-2xl md:text-3xl cursor-pointer text-blue-900' />
+          </Link>}
+          <AiOutlineShoppingCart onClick={toggleCart} className=' text-2xl md:text-3xl cursor-pointer text-blue-900' />
         </div>
         <div ref={ref} className={`w-96 h-[100vh] sideCart absolute z-10 top-0 right-0 ${Object.keys(cart).length !== 0 ? `translate-x-0`: `translate-x-full`}  transform transition-transform  bg-blue-100 px-5 py-4`}>
           <div className='flex justify-between'>

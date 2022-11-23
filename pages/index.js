@@ -22,7 +22,7 @@ const Home = () => {
               Wear whatever you want? What do you want? You want code? so why not wear the code!
             </p>
           </div>
-          <div className="flex flex-wrap -m-4">
+          <div className="flex flex-col md:flex-row -m-4">
             <div className="xl:w-1/3 md:w-1/2 p-4">
               <div className="border border-gray-200 p-6 rounded-lg flex flex-col items-center justify-center">
                 <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-blue-400 text-indigo-900 mb-4">

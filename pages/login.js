@@ -69,16 +69,16 @@ const Login = () => {
 
   }
   return (
-    <div class="mb-80">
+    <div class="mb-10 md:mb-80">
       <div class="flex flex-col md:flex-row justify-center items-center ">
       <ToastContainer position="top-center" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light" />
 
-        <div className="img ">
+        <div className={`hidden md:block `}>
             <Image src={login} width={500} alt="" />
         </div>
         <div className="p-32">
         <form onSubmit={handleSubmit} className="mt-8 space-y-6" method="POST">
-          <h2 className='text-center md:text-4xl'>Log in</h2>
+          <h2 className='text-center text-2xl md:text-4xl'>Log in</h2>
           <input type="hidden" name="remember" value="true" />
           <div className="space-y-3 rounded-md shadow-sm">
             
