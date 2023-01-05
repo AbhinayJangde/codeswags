@@ -78,8 +78,8 @@ const Login = () => {
 
   }
   return (
-    <div class="mb-10 md:mb-80">
-      <div class="flex flex-col md:flex-row justify-center items-center ">
+    <div className="mb-10 md:mb-80">
+      <div className="flex flex-col md:flex-row justify-center items-center ">
         <ToastContainer position="top-center" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light" />
 
         <div className={`hidden md:block `}>

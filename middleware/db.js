@@ -6,7 +6,7 @@ const connectdb =  handler=> async (req,res) =>{
         console.log("database connected successfully...")
         return handler(req,res)
     }
-    await mongoose.connect(process.env.DB_URI)
+    mongoose.connect(process.env.DB_URI)
     return handler(req,res)     
   
 }

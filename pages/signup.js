@@ -12,10 +12,11 @@ const Signup = () => {
     if (localStorage.getItem('token')) {
       router.push('/')
     }
-  }, [])
+  }, [router.query])
   const [name, setName] = useState()
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
+  
   const handleSubmit = async (e) => {
     e.preventDefault()
     const data = { name, email, password }
@@ -46,7 +47,6 @@ const Signup = () => {
     else if (e.target.name == 'password') {
       setPassword(e.target.value)
     }
-
 
   }
   return (

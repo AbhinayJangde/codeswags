@@ -12,7 +12,7 @@ const Hood = ({ products }) => {
           {Object.keys(products).map((item) => {
             return <div key={products[item]._id} className="lg:w-1/5 md:w-1/2 p-4 w-full cursor-pointer shadow-lg m-5">
               <Link passHref={true} href={`/product/${products[item].slug}`} className="block relative  rounded overflow-hidden">
-                <img alt="ecommerce" className="block"  src={products[item].img} />
+                <Image width={"200"} height={"500"} alt="ecommerce" className="block"  src={products[item].img} />
                 <div className="mt-4">
                   <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                     {products[item].category}

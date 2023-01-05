@@ -34,7 +34,7 @@ const Navbar = ({logout, user, cart, addToCart, removeFromCart, clearCart, subTo
             <Link href='/hoodies'><li>Hoodies</li></Link>
             <Link href='/stickers'><li>Stickers</li></Link>
             <Link href='/mugs'><li>Mugs</li></Link>
-            {/* <Link href='/mousepads'><li>Mousepads</li></Link> */}
+            <Link href='/mousepads'><li>Mousepads</li></Link>
             {/* <Link href='/caps'><li>Caps</li></Link> */}
           </ul>
         </div>

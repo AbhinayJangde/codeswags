@@ -28,9 +28,10 @@ function MyApp({ Component, pageProps }) {
     let token = localStorage.getItem('token')
     if(token){
       setUser({value: token})
-      setkey(Math.random())
+      
     }
-  }, [router.query])
+    setkey(Math.random())
+  }, [router.events])
   const saveCart = (myCart)=>{
     localStorage.setItem('cart', JSON.stringify(myCart))
     let subt = 0
