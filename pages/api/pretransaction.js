@@ -1,5 +1,5 @@
 const https = require('https');
-const PaytmChecksum = require('PaytmChecksum');
+const {generateSignature} = require('PaytmChecksum');
 
 // Ensure that required environment variables are defined
 if (!process.env.NEXT_PUBLIC_PAYTM_MID || !process.env.NEXT_PUBLIC_HOST || !process.env.PAYTM_MKEY) {
@@ -14,7 +14,7 @@ const handler = async (req, res) => {
     /* body parameters */
     paytmParams.body = {
       requestType: 'Payment',
-      mid: process.env.NEXT_PUBLIC_PAYTM_MID,
+      mid: `${process.env.NEXT_PUBLIC_PAYTM_MID}`,
       websiteName: 'YOUR_WEBSITE_NAME',
       orderId: req.body.orderid,
       callbackUrl: `${process.env.NEXT_PUBLIC_HOST}/api/posttransaction`,
@@ -26,7 +26,7 @@ const handler = async (req, res) => {
         custId: req.body.email,
       },
     };
-    const checksum = await PaytmChecksum.generateSignature(
+    const checksum = await generateSignature(
       JSON.stringify(paytmParams.body),
       process.env.PAYTM_MKEY
     );
@@ -42,7 +42,7 @@ const handler = async (req, res) => {
       return new Promise((resolve, reject) => {
         const options = {
           /* for Production */
-          hostname: 'securegw.paytm.in',
+          hostname: 'securegw-stage.paytm.in',
           port: 443,
           path: `/theia/api/v1/initiateTransaction?mid=${process.env.NEXT_PUBLIC_PAYTM_MID}&orderId=${req.body.orderid}`,
           method: 'POST',

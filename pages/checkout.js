@@ -42,38 +42,45 @@ const Checkout = ({ cart, subTotal, addToCart, removeFromCart }) => {
     console.log('initiate payment');
     const orderid = Math.floor(Math.random() * Date.now());
     const data = { cart, subTotal, orderid, email: 'email' };
-    // Get a transaction token
-    let res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pretransaction`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-
-    console.log(res);
-    const txnRes = await res.json();
-    const txnToken = txnRes.txnToken;
-    console.log(txnToken);
-    var config = {
-      "root": "",
-      "flow": "DEFAULT",
-      "data": {
-        "orderId": orderid, /* update order id */
-        "token": txnToken, /* update token value */
-        "tokenType": "TXN_TOKEN",
-        "amount": subTotal /* update amount */
-      },
-      "handler": {
-        "notifyMerchant": function (eventName, data) {
-          console.log("notifyMerchant handler function called");
-          console.log("eventName => ", eventName);
-          console.log("data => ", data);
-        }
-      }
-    };
-
+    // Get a transaction token * MID is invalid
     try {
+      let res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pretransaction`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+  
+      console.log(res);
+      
+      const txnRes = await res.json();
+      console.log("This is response ", txnRes)
+      const txnToken = txnRes.txnToken;
+      console.log("This is Token" , txnToken);
+    } catch (error) {
+      console.log('Error:', error);
+    }
+    try {
+
+      var config = {
+        "root": "",
+        "flow": "DEFAULT",
+        "data": {
+          "orderId": orderid, /* update order id */
+          "token": txnToken, /* update token value */
+          "tokenType": "TXN_TOKEN",
+          "amount": subTotal /* update amount */
+        },
+        "handler": {
+          "notifyMerchant": function (eventName, data) {
+            console.log("notifyMerchant handler function called");
+            console.log("eventName => ", eventName);
+            console.log("data => ", data);
+          }
+        }
+      };
+
       window.Paytm.CheckoutJS.init(config).then(function onSuccess() {
         window.Paytm.CheckoutJS.invoke();
       }).catch(function onError(error) {
@@ -81,6 +88,7 @@ const Checkout = ({ cart, subTotal, addToCart, removeFromCart }) => {
       });
     } catch (error) {
       console.log(error)
+      console.log("Hello Bhai")
     }
 
 
@@ -92,7 +100,7 @@ const Checkout = ({ cart, subTotal, addToCart, removeFromCart }) => {
       <Head>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
       </Head>
-      <Script type="application/javascript" src={`${process.env.NEXT_PUBLIC_PAYTM_HOST}/merchantpgpui/checkoutjs/merchants/${process.env.NEXT_PUBLIC_PAYTM_MID}.js`} crossorigin="anonymous" />
+      <Script type="application/javascript" crossorigin="anonymous" src={`${process.env.NEXT_PUBLIC_PAYTM_HOST}/merchantpgpui/checkoutjs/merchants/${process.env.NEXT_PUBLIC_PAYTM_MID}.js`} />
       <h1 className='font-bold text-3xl my-8 text-center '>Checkout</h1>
       <h2 className='text-xl font-semibold'>1. Delivery Details</h2>
       <div className="mx-auto flex my-2">
@@ -168,7 +176,7 @@ const Checkout = ({ cart, subTotal, addToCart, removeFromCart }) => {
         <span className='font-bold'>Subtotal : ₹ {subTotal}</span>
       </div>
       <div className="mx-4">
-        <Link href={'/checkout'}><button  onClick={initiatePaytment} className="disabled:bg-indigo-300 flex mx-3 mt-5 text-white bg-indigo-500 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-600 rounded text-md">
+        <Link href={'/checkout'}><button onClick={initiatePaytment} className="disabled:bg-indigo-300 flex mx-3 mt-5 text-white bg-indigo-500 border-0 py-2 px-4 focus:outline-none hover:bg-indigo-600 rounded text-md">
           Pay ₹ {subTotal}
         </button></Link>
       </div>
