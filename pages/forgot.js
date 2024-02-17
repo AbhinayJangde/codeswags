@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import  { useRouter } from 'next/router'
-import Link from 'next/link'
 import Image from 'next/image'
 import login from '../public/login.jpg'
 import { ToastContainer, toast } from 'react-toastify';
@@ -14,7 +13,7 @@ const Forgot = () => {
     if (localStorage.getItem('token')) {
       router.push('/')
     }
-  }, [router.query])
+  }, [router])
 
 
   const handleSubmit = async (e) => {
