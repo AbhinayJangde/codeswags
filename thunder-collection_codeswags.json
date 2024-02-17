@@ -1,0 +1,113 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "codeswags",
+    "dateExported": "2024-02-17T09:10:54.347Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "54bd515c-3c54-4a7d-9de9-babfdfbd7219",
+            "colId": "c46902dc-25e8-4dac-9075-e13ff7700c6a",
+            "containerId": "",
+            "name": "Add Product",
+            "url": "http://localhost:3000/api/addproduct",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-11-01T09:01:58.622Z",
+            "modified": "2023-11-03T15:53:29.534Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "[{\n  \"title\": \"Microsoft codingc\",\n  \"slug\":\"Kali Linux HoMenodies F3or  9\",\n  \"desc\":\"This is made for coders, pure cotton\",\n  \"img\":\"https://www.teez.in/cdn/shop/products/Microsoft-Logo-V-Neck-T-Shirt-For-Women_s-3_large.jpg?v=1587351625\",\n  \"category\":\"tshirts\",\n  \"size\":\"XL\",\n  \"color\":\"black\",\n  \"price\":700,\n  \"availableQty\":10\n}]",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6d161213-7d13-46f6-8b81-937b96b0927c",
+            "colId": "c46902dc-25e8-4dac-9075-e13ff7700c6a",
+            "containerId": "",
+            "name": "Get Products",
+            "url": "http://localhost:3000/api/getproducts",
+            "method": "GET",
+            "sortNum": 32500,
+            "created": "2023-11-01T09:01:58.625Z",
+            "modified": "2023-11-01T09:01:58.625Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "aca42d46-9245-42c8-8133-49b107c9d998",
+            "colId": "c46902dc-25e8-4dac-9075-e13ff7700c6a",
+            "containerId": "",
+            "name": "Update Product",
+            "url": "http://localhost:3000/api/updateproduct",
+            "method": "POST",
+            "sortNum": 41250,
+            "created": "2023-11-01T09:01:58.624Z",
+            "modified": "2023-11-03T14:39:00.414Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "[{\n  \"title\": \"Code Coffee Repeat T Shirt\",\n  \"slug\":\"Half Sleeve T Shirt for Men L-Black\",\n  \"desc\":\"This is premium t shirt pure cotton made\",\n  \"img\":\"https://m.media-amazon.com/images/I/61404Prm85L._AC_UL320_.jpg\",\n  \"category\":\"tshirts\",\n  \"size\":\"L\",\n  \"color\":\"black\",\n  \"price\":499,\n  \"availableQty\":10\n}]",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "efa34996-f6ac-479d-b8b8-e922a30fb539",
+            "colId": "c46902dc-25e8-4dac-9075-e13ff7700c6a",
+            "containerId": "",
+            "name": "Sign Up",
+            "url": "http://localhost:3000/api/signup",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-11-01T09:01:58.623Z",
+            "modified": "2023-11-01T09:01:58.623Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Abhi\",\n  \"email\":\"abhinayjangde@gmail.com\",\n  \"password\":\"1234\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5cf0b9e8-d8a3-46d5-9d5c-e452bb6be215",
+            "colId": "c46902dc-25e8-4dac-9075-e13ff7700c6a",
+            "containerId": "",
+            "name": "Login",
+            "url": "http://localhost:3000/api/login",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-11-01T09:01:58.626Z",
+            "modified": "2023-11-02T08:38:04.861Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"abhi@bhai.com\",\n  \"password\":1234\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "782c9468-71ef-473e-b346-74500cf3722c",
+            "colId": "c46902dc-25e8-4dac-9075-e13ff7700c6a",
+            "containerId": "",
+            "name": "Post Transaction",
+            "url": " http://localhost:3000/api/pretransaction",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-11-01T09:01:58.627Z",
+            "modified": "2023-11-01T09:01:58.627Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
