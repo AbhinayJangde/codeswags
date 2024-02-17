@@ -16,7 +16,7 @@ const Login = () => {
     if(localStorage.getItem('token')){
       router.push('/')
     }
-  },[])
+  },[router])
   const handleSubmit = async (e) => {
     e.preventDefault()
     const data = { email, password }
@@ -121,7 +121,7 @@ const Login = () => {
               I don't have an account?
               <Link href={'/signup'} className="no-underline border-b border-blue mx-1 text-indigo-500">
                 Sign up
-              </Link>.
+              </Link>
             </div>
           </form>
         </div>
