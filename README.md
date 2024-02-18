@@ -2,7 +2,7 @@
     - An E-Commerce site build by Me.
 
 > Pull requests are always welcome...😊
-# ```First Steps after cloning```
+# First Steps after cloning
 
 ```
 >>> npm install -g yarn
@@ -11,7 +11,7 @@
 
 ```
 
-# 😁 Make sure to add ```.env``` file.
+# Make sure to add ```.env``` file...😁 
 ```env
 NEXT_PUBLIC_HOST=http://localhost:3000
 NEXT_PUBLIC_PAYTM_MID=Your Paytm MID
