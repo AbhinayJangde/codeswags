@@ -1,6 +1,7 @@
-# ```Codeswags```
+# CODESWAGS.COM
     - An E-Commerce site build by Me.
 
+> Pull requests are always welcome...😊
 # ```First Steps after cloning```
 
 ```
@@ -21,4 +22,4 @@ AES_SECRET=dsj3242u2hjksdfaf
 DB_URI=mongodb+srv://<username>:<password>@cluster0.dxmil.mongodb.net/Codeswags?retryWrites=true&w=majority
 
 ```
-- please change ```username``` and ```password``` above.
+> Please change ```username``` and ```password``` above.
